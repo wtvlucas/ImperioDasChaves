@@ -288,7 +288,7 @@ body {
 .cta-button {
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold));
     color: #000;
     border: none;
@@ -299,6 +299,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     order: 5;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-button:hover {
