@@ -452,7 +452,7 @@ body {
 @media (max-width: 480px) {
     .whatsapp-button {
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         width: 55px;
         height: 55px;
     }
@@ -682,7 +682,7 @@ body {
     }
 
     .hero {
-        min-height: auto;
+        min-height: 100vh;
         padding: 3rem 1rem;
     }
 
@@ -735,5 +735,9 @@ body {
 
     .highlight-number {
         font-size: 1.5rem;
+    }
+
+    .hero-title-logo {
+    max-width: 90%;
     }
 }
