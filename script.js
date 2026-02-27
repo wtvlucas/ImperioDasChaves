@@ -167,3 +167,14 @@ document.addEventListener('keydown', (e) => {
         mobileMenu.classList.remove('active');
     }
 });
+
+
+// Disable Right-Click and Common Shortcuts (F12, Ctrl+U, etc.)
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+        if (event.keyCode == 123 || // F12
+            (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74)) || // Ctrl+Shift+I/C/J
+            (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83))) { // Ctrl+U/S
+            return false;
+        }
+    }
