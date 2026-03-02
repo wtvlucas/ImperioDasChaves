@@ -180,7 +180,9 @@ body {
     background: var(--primary-gold);
     transition: var(--transition);
     border-radius: 2px;
-}
+}´
+
+
 
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(10px, 10px);
@@ -414,6 +416,12 @@ body {
     color: var(--primary-gold);
     margin-bottom: 1rem;
     font-weight: 600;
+}
+
+.glow-text {
+    color: #FFD700;
+    animation: glowPulse 2s ease-in-out infinite;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
 }
 
 .footer-text {
