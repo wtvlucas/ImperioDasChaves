@@ -332,9 +332,9 @@ body {
 .hero-description {
     font-size: 1.2rem;
     color: var(--primary-gold);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-weight: 500;
-    order: 4;
+    order: 5;
 }
 
 .cta-button {
@@ -350,9 +350,10 @@ body {
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
     text-transform: uppercase;
     letter-spacing: 1px;
-    order: 5;
+    order: 4;
     text-decoration: none;
     display: inline-block;
+    margin-bottom: 1rem;
 }
 
 .cta-button:hover {
@@ -377,13 +378,50 @@ body {
 .services-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop - Centrar último card */
+@media (min-width: 1025px) {
+    .service-card:nth-last-child(1):nth-child(3n+1) {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 3rem 1.5rem;
+    }
+
+    .services-container {
+        padding: 0 0.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+        min-width: 0;
+        max-width: 100%;
+    }
 }
 
 .service-card {
@@ -715,6 +753,12 @@ body {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 1024px) {
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     .about-container {
