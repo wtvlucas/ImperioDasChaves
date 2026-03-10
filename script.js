@@ -169,3 +169,25 @@ document.addEventListener('keydown', (e) => {
 });
 
 
+const urlParams = new URLSearchParams(window.location.search);
+const cidadeParam = urlParams.get('cidade');
+
+if (cidadeParam) {
+    // Formatar a cidade (Primeira letra maiúscula)
+    const cidadeFormatada = cidadeParam.charAt(0).toUpperCase() + cidadeParam.slice(1).toLowerCase();
+    
+    // Atualizar hero subtitle
+    const heroSubtitle = document.getElementById('hero-subtitle');
+    if (heroSubtitle) {
+        heroSubtitle.innerText = `Abertura de Portas 24h em ${cidadeFormatada}`;
+    }
+    
+    // Atualizar footer abertura
+    const footerAbertura = document.getElementById('footer-abertura');
+    if (footerAbertura) {
+        footerAbertura.innerText = `Abertura de Portas 24h em ${cidadeFormatada}`;
+    }
+    
+    // Atualizar page title
+    document.title = `Abertura de Portas 24h em ${cidadeFormatada} - Império Das Chaves`;
+}

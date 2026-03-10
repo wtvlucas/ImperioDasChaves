@@ -63,7 +63,8 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -73,6 +74,7 @@ body {
     gap: 1rem;
     cursor: pointer;
     transition: var(--transition);
+    margin-left: 0;
 }
 
 .logo {
@@ -111,7 +113,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0;
     flex: 1;
 }
 
@@ -491,6 +493,41 @@ body {
     font-size: 1rem;
 }
 
+/* ==================== COMING SOON SERVICES ==================== */
+
+.service-card.coming-soon {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.service-card.coming-soon:hover {
+    transform: none;
+    border-color: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.05);
+}
+
+.service-card.coming-soon:hover .service-icon img {
+    transform: none;
+}
+
+.coming-soon-badge {
+    position: absolute;
+    top: 3rem;
+    right: -4.5rem;
+    background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold));
+    color: var(--dark-bg);
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+    width: 280px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
 
 /* ==================== WHATSAPP BUTTON ==================== */
 
@@ -703,7 +740,7 @@ body {
 
 .footer-text {
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.3;
     font-size: 1rem;
 }
 
@@ -861,3 +898,44 @@ body {
     max-width: 90%;
     }
 }
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 2rem; /* distância do menu de navegação */
+}
+
+.social-link img {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* Hero social icons - hidden on desktop, shown on mobile/tablet */
+.hero-social-icons {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    order: 6;
+}
+
+.hero-social-icons .social-link img {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.5));
+}
+
+@media (max-width: 768px) {
+    .hero-social-icons {
+        display: flex;
+    }
+
+    .social-icons {
+        margin-left: 0.5rem;
+    }
+}
+
+
